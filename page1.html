@@ -1,18 +1,33 @@
 <!DOCTYPE html>
-<html lang="pt br">
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vai Trabalhar!</title>
+  <script>
+    // Script para preencher a data atual automaticamente
+    window.onload = () => {
+      const hoje = new Date();
+      const dias = ["Domingo", "Segunda-feira", "Terça-feira", "Quarta-feira", "Quinta-feira", "Sexta-feira", "Sábado"];
+      const meses = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
+      const dataFormatada = `${dias[hoje.getDay()]}, ${hoje.getDate()} de ${meses[hoje.getMonth()]} de ${hoje.getFullYear()}`;
+      document.getElementById("data-atual").innerText = dataFormatada;
+    }
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
 <body class="bg-stone-100 font-sans">
-    <header class="bg-neutral-950 shadow-lg py-4 px-6 flex flex-col items-center">
-        <div class="text-sm text-gray-300 self-start w-120 text-left mb-2">
-          <p>Segunda-feira,</p>
-          <p>26 de Maio de 2025</p>
-        </div>
-    <h1> VAI TRABALHAR VIADINHO </h1>
-      </header>
 
-    <main class="grid grid-cols-1 lg:grid-cols-4 gap-4 mt-4 px-4 lg:px-5">
-        <h1> VAI TRABALHAR E PARA DE CLICAR EM QUALQUER LINK, CURIOSO!!!! </h1>
-        <h2> IMAGINA SE O Sr. Carlos VÊ VOCÊ ACESSANDO QUALQUER COISA? NÃO VAI SER LEGAL!!</h2>
-        <h3> BOM TRABALHO AMIGO QUERIDO!</h3>
-</main>
+  <header class="bg-neutral-950 shadow-lg py-6 px-6 text-center text-white">
+    <p id="data-atual" class="text-sm text-gray-400 mb-2"></p>
+    <h1 class="text-3xl font-bold uppercase tracking-wide">Vai trabalhar, viadinho 😈</h1>
+  </header>
+
+  <main class="flex flex-col items-center text-center px-6 py-10 space-y-6">
+    <h1 class="text-xl font-semibold text-red-600">👀 Vai trabalhar e para de clicar em qualquer link, curioso!!!</h1>
+    <h2 class="text-lg text-yellow-700">🫣 Imagina se o Sr. Carlos te pega navegando por aí? Não vai ser bonito!</h2>
+    <h3 class="text-base text-green-700">💼 Bom trabalho, amigão!</h3>
+  </main>
 
 </body>
+</html>
